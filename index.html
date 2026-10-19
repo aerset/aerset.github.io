@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aerset | The trust layer for medical drone delivery</title>
+<meta name="description" content="Aerset is chain-of-custody, dispatch and compliance software for medical drone delivery, for drone operators and NHS teams. In development.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#09254A">
+<meta property="og:title" content="Aerset | The trust layer for medical drone delivery">
+<meta property="og:description" content="Chain-of-custody, dispatch and compliance software for medical drone delivery. In development.">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/plex-sans.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Aerset home"><img src="img/logo-full.svg" alt="Aerset" height="28" width="117"></a>
+    <nav aria-label="Main">
+      <a href="#product">Product</a><a href="#demo">Demo</a><a href="#who">Who it's for</a><a href="#status">Status</a><a class="btn btn-sm" href="interest.html">Register interest</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="label">Chain of custody · Dispatch · Compliance</span>
+        <h1>The record that travels with every sample.</h1>
+        <p class="lead">Aerset is software for medical drone delivery. It logs who held each sample, what temperature it was kept at, and why each flight was allowed to leave.</p>
+        <div class="cta-row">
+          <a class="btn btn-lg" href="interest.html">Register interest →</a>
+          <a class="link-arrow" href="#demo">Watch the 80-second demo →</a>
+        </div>
+      </div>
+      <dl class="hero-facts">
+        <dt>Built for</dt><dd>NHS pathology and logistics teams, and the drone operators who fly for them</dd>
+        <dt>Doesn't do</dt><dd>Fly or own drones. Aerset works across any operator and airframe.</dd>
+        <dt>Stage</dt><dd>In development. Simulated demo only, no live flights.</dd>
+      </dl>
+    </div>
+    <figure class="hero-shot">
+      <img src="img/dispatch-blocked.jpg" width="1600" height="900" alt="Aerset jobs screen: a pathology flight from Huddersfield Royal Infirmary to Calderdale is blocked because UN3373 packaging has not been confirmed. The chain-of-custody log is on the right.">
+    </figure>
+    <p class="caption">Simulated demo data. Dispatch is refused because the specimen hasn't been declared as UN3373 in P650 triple packaging.</p>
+  </div>
+</section>
+
+<section id="mission" class="section mission">
+  <div class="wrap intro">
+    <div><span class="label">Mission</span><h2>Make every medical drone flight provable.</h2></div>
+    <div>
+      <p class="big">We want an NHS lab manager, an auditor or the CAA to be able to open one record and see, for any sample flown by drone, who held it, the temperature it was kept at and every check the flight passed.</p>
+      <p>We're starting with pathology samples moving between hospital sites in West Yorkshire, then plan to move on to chemotherapy and blood. We're building the software layer only, and we're doing it in the open with the teams who would use it.</p>
+      <p><a class="btn btn-lg" href="interest.html">Register interest</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap intro">
+    <div>
+      <span class="label">The gap</span>
+      <h2>Drones are fast. The paperwork isn't.</h2>
+    </div>
+    <div>
+      <p class="big">Labs record a sample at collection and again on arrival. When a drone flies the leg in between, the evidence ends up split across flight logs, spreadsheets and paper.</p>
+      <p>That slows down audits, incident reviews and procurement. Before medical drone delivery can scale, every leg needs a clear answer to two questions: who held this sample, and did this flight pass its checks?</p>
+    </div>
+  </div>
+</section>
+
+<section id="product" class="section paper">
+  <div class="wrap">
+    <span class="label">What the software does</span>
+    <h2>No proof, no flight.</h2>
+
+    <div class="row flip">
+      <div class="row-text">
+        <span class="num">01 / Dispatch</span>
+        <h3>Flights that can't leave until the checks pass</h3>
+        <p>Before a job is released to the operator, Aerset checks it against the rules for that route. If anything fails, the flight is held and the reason is written into the record.</p>
+        <ul>
+          <li>Diagnostic specimens declared as <code>UN3373</code> in P650 packaging</li>
+          <li>Geofence, including prison no-fly zones</li>
+          <li>Pilot certificates, insurance and aircraft maintenance in date</li>
+          <li>Weather within limits for the airframe</li>
+        </ul>
+      </div>
+      <figure class="frame"><img src="img/flight-temp.jpg" width="1600" height="900" alt="Simulated flight from Huddersfield Royal Infirmary to Calderdale on a map, with a payload temperature chart and the custody timeline" loading="lazy"></figure>
+    </div>
+
+    <div class="row">
+      <div class="row-text">
+        <span class="num">02 / Chain of custody</span>
+        <h3>A log that shows when it's been changed</h3>
+        <p>Every scan and signed handover is added to an append-only log. Each entry stores a SHA-256 hash of itself and of the entry before it, so editing any past entry breaks the chain and the change is easy to spot.</p>
+        <p>Temperature and shock are logged throughout the flight. A cold-chain excursion is flagged automatically and appears in the same timeline as the handovers.</p>
+      </div>
+      <figure class="frame narrow"><img src="img/tamper.jpg" width="363" height="747" alt="Aerset tamper test: one edited log entry in a copy shows CHAIN BROKEN at event 2, while the stored chain stays verified" loading="lazy"></figure>
+    </div>
+
+    <div class="row flip">
+      <div class="row-text">
+        <span class="num">03 / Evidence</span>
+        <h3>Evidence packs drawn straight from the record</h3>
+        <p>One click turns the record into a chain-of-custody certificate for each job, or a CAA BVLOS / SORA evidence pack covering insurance, remote pilots, airworthiness, routes, incidents and custody checks for every job.</p>
+        <p class="caption">The pack supports an operator's SORA or Operational Authorisation submission. It is not a submission itself.</p>
+      </div>
+      <figure class="frame"><img src="img/evidence-pack.jpg" width="900" height="733" alt="First page of a simulated CAA / SORA evidence pack generated by Aerset" loading="lazy"></figure>
+    </div>
+
+    <div class="flow" aria-label="A job, end to end">
+      <div><strong>Collect</strong>Sample ID scanned at phlebotomy</div>
+      <div><strong>Hand over</strong>Signed off from requester to operator</div>
+      <div><strong>Gate</strong>UN3373, geofence, pilot and weather checks</div>
+      <div><strong>Fly</strong>Temperature and shock logged in flight</div>
+      <div><strong>Receive</strong>Signed in at the lab, record closed</div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="section">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <span class="label">Product demo</span>
+        <h2>One job, start to finish.</h2>
+      </div>
+      <div>
+        <p>A simulated pathology run from Huddersfield Royal Infirmary to Calderdale Royal Hospital: the dispatch is blocked, fixed and approved, then the flight is tracked with temperature, an excursion is flagged, the sample is received and an evidence pack is generated. Everything you see is simulated data.</p>
+      </div>
+    </div>
+    <figure class="video-wrap">
+      <video controls preload="metadata" muted playsinline poster="video/aerset-demo-poster.jpg" width="1920" height="1080">
+        <source src="video/aerset-demo.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="video/aerset-demo.mp4">Download the demo</a>.
+      </video>
+    </figure>
+    <p class="caption">Simulated demo. No real flights, patients or customers.</p>
+    <div class="clip2" id="backend-clip" hidden>
+      <div><span class="num">Clip 2 / Backend and API</span><h3>Under the hood</h3><p>The documented REST API, the automated test suite (119 tests, 85% coverage) and the hash-chained custody log, on simulated data.</p></div>
+      <figure class="video-wrap"><video controls preload="metadata" muted playsinline poster="video/aerset-backend-poster.jpg" width="1920" height="1080" id="backend-video"><source src="video/aerset-backend.mp4" type="video/mp4"></video></figure>
+    </div>
+    <div class="clip2 app-clip">
+      <div><span class="num">Clip 3 / Customer app (simulated)</span><h3>Customer app (simulated)</h3><p>The front end for retail customers: placing a delivery and following it on the map. An early prototype on simulated data.</p></div>
+      <figure class="video-wrap phone"><video controls preload="metadata" muted playsinline poster="video/aerset-app-demo-poster.jpg" width="1080" height="1920"><source src="video/aerset-app-demo.mp4" type="video/mp4"></video></figure>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="section paper">
+  <div class="wrap">
+    <span class="label">Who it's for</span>
+    <h2>Shared by the lab, the trust and the operator.</h2>
+    <div class="who">
+      <article><h3>NHS trusts and pathology labs</h3><p>A single audit trail for samples moved by drone, designed to sit alongside your existing sample tracking and lab systems rather than replace them.</p></article>
+      <article><h3>Drone operators</h3><p>A way to show NHS buyers and the CAA that every flight met its checks and every handover was recorded. Works with any airframe.</p></article>
+      <article><h3>Retail <span class="later">Later</span></h3><p>The same dispatch and proof-of-delivery record with simpler setup for shops sending parcels. No specimen rules or cold chain needed.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="status" class="section">
+  <div class="wrap status-box">
+    <div>
+      <span class="label">Where we are</span>
+      <h2>Early, and clear about it.</h2>
+      <p>Aerset is in development and the demo runs on simulated data. We're looking for a small number of NHS pathology teams and operators to help shape it.</p>
+    </div>
+    <ul class="notlist">
+      <li><span>Flights</span>No live flights yet</li>
+      <li><span>Customers</span>No customers yet</li>
+      <li><span>Regulation</span>Not CAA-approved</li>
+      <li><span>NHS</span>Not NHS-assured</li>
+      <li><span>Security</span>Not independently security-audited</li>
+      <li><span>Readiness</span>Not production-ready</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Run pathology logistics, or fly for healthcare?</h2>
+      <p>We'd like to hear how you handle custody and flight evidence today. It takes two minutes, and there's no sales sequence afterwards.</p>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="interest.html">Register interest</a>
+      <a href="mailto:aerset.hq@gmail.com?subject=Aerset%20design%20partner">aerset.hq@gmail.com</a>
+      <a class="li-link" href="https://www.linkedin.com/company/aerset/" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <img src="img/logo-full-white.svg" alt="Aerset" height="24" width="100" style="margin-bottom:14px">
+      <p>The trust layer for medical drone delivery</p>
+      <p><a href="interest.html">Register interest</a> · <a href="interest.html#privacy">Privacy</a> · <a class="li-link" href="https://www.linkedin.com/company/aerset/" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></p>
+    </div>
+    <div>
+      <p>Aerset does not operate drones. It is in development and is not CAA-approved, NHS-assured, security-audited or production-ready. Screens and video show simulated data. Hospital names are used only to make the demo route realistic and do not imply any relationship.</p>
+      <p>This site uses no cookies or tracking.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){var v=document.getElementById('backend-video'),b=document.getElementById('backend-clip');
+fetch('video/aerset-backend.mp4',{method:'HEAD'}).then(function(r){if(r.ok)b.hidden=false;}).catch(function(){
+ v.addEventListener('loadedmetadata',function(){b.hidden=false;});v.load();});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register interest | Aerset</title>
+<meta name="description" content="Would Aerset help you? Tell us about medical drone delivery compliance in your organisation.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#09254A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/plex-sans.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Aerset home"><img src="img/logo-full.svg" alt="Aerset" height="28" width="117"></a>
+    <nav aria-label="Main">
+      <a href="index.html#product">Product</a><a href="index.html#demo">Demo</a><a href="index.html#who">Who it's for</a><a class="btn btn-sm" href="interest.html" aria-current="page">Register interest</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <span class="label">Register interest · about two minutes</span>
+    <h1>Would this help you?</h1>
+    <p class="lead">We're building Aerset with the people who'll use it. Two minutes of your view on drone and medical delivery compliance shapes what we build first.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap form-wrap">
+    <!-- Replace https://formspree.io/f/myekvlqy with a Formspree (https://formspree.io/f/xxxx), Tally or Google Forms endpoint.
+         Until then, submitting opens a pre-filled email to aerset.hq@gmail.com. -->
+    <form class="form" id="interest-form" action="https://formspree.io/f/myekvlqy" method="POST" data-mailto="aerset.hq@gmail.com" novalidate>
+      <input type="hidden" name="_subject" value="Aerset interest form">
+      <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+
+      <div class="field">
+        <label for="role">Which best describes you? <span class="req" aria-hidden="true">*</span></label>
+        <select id="role" name="role" required>
+          <option value="">Select one</option>
+          <option>Hospital / NHS trust</option>
+          <option>Pathology lab</option>
+          <option>Drone operator</option>
+          <option>Retail / delivery</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="organisation">Organisation <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="organisation" name="organisation" autocomplete="organization" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Work email <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="field">
+        <label for="pain">What's the biggest pain point in drone or medical delivery compliance today?
+          <span class="hint">For example: audit trails, chain of custody, approvals, temperature evidence, paperwork.</span></label>
+        <textarea id="pain" name="pain_point"></textarea>
+      </div>
+
+      <fieldset class="field">
+        <legend>How interested are you in something like Aerset? <span class="req" aria-hidden="true">*</span></legend>
+        <div class="scale">
+          <label><input type="radio" name="interest" value="1" required> 1</label>
+          <label><input type="radio" name="interest" value="2"> 2</label>
+          <label><input type="radio" name="interest" value="3"> 3</label>
+          <label><input type="radio" name="interest" value="4"> 4</label>
+          <label><input type="radio" name="interest" value="5"> 5</label>
+        </div>
+        <div class="scale-ends" aria-hidden="true"><span>1 = Not for us</span><span>5 = We need this</span></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>Would you join a 20-minute discovery call or a pilot?</legend>
+        <div class="choices">
+          <label><input type="radio" name="discovery_call" value="Yes, a call or a pilot"> Yes, a call or a pilot</label>
+          <label><input type="radio" name="discovery_call" value="A call only"> A call only</label>
+          <label><input type="radio" name="discovery_call" value="Not right now"> Not right now</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="notes">Anything else? <span class="hint">Optional</span></label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+
+      <div class="field">
+        <label class="consent"><input type="checkbox" name="consent" value="yes" required>
+          <span>I agree that Aerset can store these details and contact me about this research and the product. I can ask for my data to be deleted at any time. <span class="req" aria-hidden="true">*</span></span></label>
+      </div>
+
+      <button class="btn" type="submit">Send my answers</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      <p class="privacy"><span class="req">*</span> Required. Prefer email? Write to <a href="mailto:aerset.hq@gmail.com?subject=Aerset%20interest">aerset.hq@gmail.com</a>.</p>
+    </form>
+
+    <aside class="aside">
+      <section>
+        <h3>What happens next</h3>
+        <ul>
+          <li>We read every response ourselves.</li>
+          <li>If you're open to a call, we'll email you to find a time.</li>
+          <li>No sales sequence and no mailing list.</li>
+        </ul>
+      </section>
+      <section id="privacy">
+        <h3>Privacy</h3>
+        <p>We use your answers only to understand the market and to contact you about Aerset. We don't sell or share them, and we keep them for no longer than 24 months. To see or delete your data, email <a href="mailto:aerset.hq@gmail.com">aerset.hq@gmail.com</a>. This site sets no cookies and uses no tracking.</p>
+      </section>
+      <section>
+        <h3>Where we are</h3>
+        <p>Aerset is in development, with a simulated demo only. It does not fly drones and is not yet CAA-approved, NHS-assured or security-audited.</p>
+      </section>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><img src="img/logo-full-white.svg" alt="Aerset" height="24" width="100" style="margin-bottom:14px"><p>The trust layer for medical drone delivery</p><p><a class="li-link" href="https://www.linkedin.com/company/aerset/" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></p></div>
+    <div><p>Aerset does not operate drones. It is in development and is not CAA-approved, NHS-assured, security-audited or production-ready.</p><p>This site uses no cookies or tracking.</p></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var f=document.getElementById('interest-form'),st=document.getElementById('form-status');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){st.textContent='Please complete the required fields and the consent box.';f.reportValidity();return;}
+    var d=new FormData(f);
+    if(d.get('_gotcha'))return;
+    var ep=f.getAttribute('action'),configured=ep&&ep.indexOf('{{')===-1;
+    function mailto(){
+      var lines=[];d.forEach(function(v,k){if(k.charAt(0)!=='_')lines.push(k+': '+v);});
+      location.href='mailto:'+f.dataset.mailto+'?subject='+encodeURIComponent('Aerset interest form')+'&body='+encodeURIComponent(lines.join('\n'));
+      st.textContent='Your email app should open with your answers filled in. Just press send.';
+    }
+    if(!configured){mailto();return;}
+    st.textContent='Sending…';
+    fetch(ep,{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){
+      if(!r.ok)throw 0;f.reset();st.textContent='Thank you. We\'ve got your answers and will be in touch if you asked for a call.';
+    }).catch(mailto);
+  });
+})();
+</script>
+</body>
+</html>

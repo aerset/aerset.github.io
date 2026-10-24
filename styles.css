@@ -140,6 +140,9 @@ img{height:auto}
 .clip2[hidden]{display:none}
 .clip2 .video-wrap{margin:0}
 @media (max-width:900px){.clip2{grid-template-columns:1fr;gap:20px}}
-.video-wrap.phone{max-width:340px;background:none}
-.app-clip{grid-template-columns:8fr 4fr}
-@media (max-width:900px){.app-clip{grid-template-columns:1fr}.video-wrap.phone{max-width:300px}}
+
+/* iteration 3 (24 Oct 2026) */
+.why{font-size:1rem!important;border-left:2px solid var(--navy);padding-left:16px}
+.assurance{margin:24px 0 0;padding:14px 0 0;border-top:2px solid var(--navy);font-size:.98rem;color:var(--ink)}
+.assurance span{font-family:var(--mono);font-size:.8rem;color:var(--muted);display:block}
+.paper+.paper{border-top:1px solid var(--line)}

@@ -146,3 +146,19 @@ img{height:auto}
 .assurance{margin:24px 0 0;padding:14px 0 0;border-top:2px solid var(--navy);font-size:.98rem;color:var(--ink)}
 .assurance span{font-family:var(--mono);font-size:.8rem;color:var(--muted);display:block}
 .paper+.paper{border-top:1px solid var(--line)}
+
+/* iteration 4 (24 Oct 2026): live-in-demo features */
+.live{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border-top:2px solid var(--navy)}
+.live article{padding:28px 40px 24px 0;border-bottom:1px solid var(--line)}
+.live article:nth-child(2n){padding-left:40px;padding-right:0;border-left:1px solid var(--line)}
+.live ul{list-style:none;padding:0;margin:0;font-size:.96rem;color:#36404f}
+.live li{padding:10px 0;border-top:1px solid var(--line)}
+.live li:first-child{border-top:0;padding-top:0}
+.live li strong{color:var(--navy);font-weight:600}
+.live code{font-family:var(--mono);font-size:.85em;color:var(--navy)}
+.limits{margin:32px 0 0;max-width:72ch;font-size:.98rem;color:#36404f}
+.limits span{font-family:var(--mono);font-size:.8rem;color:var(--muted);display:block;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+@media (max-width:900px){
+ .live{grid-template-columns:1fr}
+ .live article,.live article:nth-child(2n){padding:24px 0 20px;border-left:0}
+}

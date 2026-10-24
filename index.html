@@ -20,7 +20,7 @@
   <div class="wrap nav-inner">
     <a class="brand" href="index.html" aria-label="Aerset home"><img src="img/logo-full.svg" alt="Aerset" height="28" width="117"></a>
     <nav aria-label="Main">
-      <a href="#product">Product</a><a href="#demo">Demo</a><a href="#who">Who it's for</a><a href="#status">Status</a><a href="#founder">Founder</a><a class="btn btn-sm" href="interest.html">Register interest</a>
+      <a href="#product">Product</a><a href="#features">Features</a><a href="#demo">Demo</a><a href="#who">Who it's for</a><a href="#status">Status</a><a href="#founder">Founder</a><a class="btn btn-sm" href="interest.html">Register interest</a>
     </nav>
   </div>
 </header>
@@ -124,6 +124,55 @@
       <div><strong>Carry</strong>Drone or road leg, with temperature and shock logged</div>
       <div><strong>Receive</strong>Signed in at the lab, record closed</div>
     </div>
+  </div>
+</section>
+
+<section id="features" class="section">
+  <div class="wrap">
+    <div class="intro">
+      <div>
+        <span class="label">Working in the demo now</span>
+        <h2>Operators fly. Aerset proves what happened.</h2>
+      </div>
+      <div>
+        <p>Everything below works in our demo today. The demo runs on simulated data: scans, seals, tracking positions and photos are simulated and labelled as such. There are no real flights, samples or customers.</p>
+      </div>
+    </div>
+    <div class="live">
+      <article>
+        <h3>Custody at every handover</h3>
+        <ul>
+          <li><strong>Secure handover.</strong> A signed, single-use QR code that changes every 60 seconds, or a PIN or NFC tag. A job can't be dispatched without a pickup scan, and it's only marked delivered after a scan at the other end.</li>
+          <li><strong>Tamper-evident seals.</strong> Checked at packing, pickup and delivery. If a seal doesn't match, pickup is stopped or an incident is raised.</li>
+          <li><strong>Proof of delivery.</strong> A photo at hand-off, with its location data removed and its hash added to the custody record.</li>
+          <li><strong>Failed deliveries and returns.</strong> Recorded in the same chain, so the record shows what happened next.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Evidence anyone can check</h3>
+        <ul>
+          <li><strong>Hash-chained record.</strong> Every step is linked to the one before it, so changing any past entry breaks the chain.</li>
+          <li><strong>Independent timestamp.</strong> The record can be timestamped by an outside service using the <code>RFC 3161</code> standard.</li>
+          <li><strong>Offline verification kit.</strong> An auditor can check the record and its timestamp on their own computer, without having to trust Aerset.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Checks before and during the journey</h3>
+        <ul>
+          <li><strong>Payload weight limits.</strong> Checked when the job is created and again at dispatch. If the weight is missing, the job doesn't go.</li>
+          <li><strong>Battery and range reserve.</strong> Checked before dispatch, so a job isn't released without enough in reserve.</li>
+          <li><strong>Live tracking.</strong> Shows clearly when the signal is lost, and can be shared through a private link that expires.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Access and support</h3>
+        <ul>
+          <li><strong>Staff sign-in.</strong> Two-step login for staff, with accounts locked after repeated failed attempts.</li>
+          <li><strong>Help.</strong> Short help articles, plus a "talk to a person" option that goes to a staff support inbox.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="limits"><span>Honest limits</span>A seal shows that a box was opened, not what was packed inside it. A timestamp proves a record hasn't changed since it was sealed, not that what it says was true. Aerset doesn't fly drones; the operator stays in charge of the flight.</p>
   </div>
 </section>
 

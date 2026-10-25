@@ -162,3 +162,20 @@ img{height:auto}
  .live{grid-template-columns:1fr}
  .live article,.live article:nth-child(2n){padding:24px 0 20px;border-left:0}
 }
+
+/* iteration 5 (25 Oct 2026): try-the-demo CTA, demo privacy page */
+.demo-cta{margin:28px 0 0;padding:18px 0 0;border-top:1px solid var(--line);max-width:46ch}
+.demo-cta-section{max-width:none;margin-top:32px}
+.demo-cta-label{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);display:block;margin-bottom:10px}
+.demo-cta-links{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.btn-ghost{background:#fff;color:var(--navy)!important;border:1px solid var(--navy)}
+.btn-ghost:hover{background:var(--paper)}
+.demo-note{font-size:.9rem;color:var(--muted);margin:0 0 .4em;max-width:70ch}
+.legal{max-width:72ch}
+.legal h2{font-size:1.35rem;margin-top:2em;max-width:none}
+.legal h2:first-child{margin-top:0}
+.legal p,.legal li{color:#36404f}
+.legal ul{padding-left:20px}
+.legal table{border-collapse:collapse;width:100%;font-size:.95rem;margin:0 0 1em}
+.legal th,.legal td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-top:1px solid var(--line)}
+.legal th{color:var(--navy);font-weight:600;width:30%}

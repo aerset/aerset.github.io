@@ -35,7 +35,16 @@
         <p class="lead">Aerset is an independent, tamper-evident record of who held each medical sample, the temperature it was kept at, and the drone or road journey that carried it. It sits on top of the tracking your courier and lab systems already do.</p>
         <div class="cta-row">
           <a class="btn btn-lg" href="interest.html">Register interest →</a>
-          <a class="link-arrow" href="#demo">Watch the 80-second demo →</a>
+          <a class="link-arrow" href="#demo">Watch the demo video →</a>
+        </div>
+        <div class="demo-cta">
+          <span class="demo-cta-label">Try the demo (simulated data)</span>
+          <div class="demo-cta-links">
+            <a class="btn btn-ghost" href="https://aerset-demo.onrender.com/dashboard" rel="noopener">Operator dashboard →</a>
+            <a class="btn btn-ghost" href="https://aerset-demo.onrender.com/app/" rel="noopener">Customer app →</a>
+          </div>
+          <p class="demo-note">The demo runs on simulated data. It may take up to a minute to wake up on first load (free hosting).</p>
+          <p class="demo-note">No sign-up needed: on the dashboard, choose <strong>Try with demo data</strong>. <a href="privacy.html">Demo privacy notice</a>.</p>
         </div>
       </div>
       <dl class="hero-facts">
@@ -184,16 +193,28 @@
         <h2>One job, start to finish.</h2>
       </div>
       <div>
-        <p>A simulated pathology run from Huddersfield Royal Infirmary to Calderdale Royal Hospital: the dispatch is blocked, fixed and approved, then the flight is tracked with temperature, an excursion is flagged, the sample is received and an evidence pack is generated. Everything you see is simulated data.</p>
+        <p>One simulated pathology sample, from booking to the lab: the checks before dispatch, the sealed and signed handovers, live tracking and the evidence pack at the end. Everything you see is simulated data.</p>
       </div>
     </div>
+    <!-- Demo video. New public cut: video/aerset-demo-public.mp4 (captions burned in).
+         Until that file exists, the script at the bottom falls back to the old video/aerset-demo.mp4. -->
     <figure class="video-wrap">
-      <video controls preload="metadata" muted playsinline poster="video/aerset-demo-poster.jpg" width="1920" height="1080">
-        <source src="video/aerset-demo.mp4" type="video/mp4">
-        Your browser can't play this video. <a href="video/aerset-demo.mp4">Download the demo</a>.
+      <video id="demo-video" controls preload="metadata" playsinline poster="video/aerset-demo-public-poster.jpg" width="1920" height="1080"
+        data-fallback-src="video/aerset-demo.mp4" data-fallback-poster="video/aerset-demo-poster.jpg">
+        <source id="demo-video-src" src="video/aerset-demo-public.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="video/aerset-demo-public.mp4">Download the demo</a>.
       </video>
     </figure>
-    <p class="caption">Simulated demo. No real flights, patients or customers.</p>
+    <p class="caption">Simulated demo data throughout. No real flights, patients or customers. Narrated with a synthetic voice; captions are built into the video.</p>
+    <div class="demo-cta demo-cta-section">
+      <span class="demo-cta-label">Try the demo (simulated data)</span>
+      <div class="demo-cta-links">
+        <a class="btn btn-ghost" href="https://aerset-demo.onrender.com/dashboard" rel="noopener">Operator dashboard →</a>
+        <a class="btn btn-ghost" href="https://aerset-demo.onrender.com/app/" rel="noopener">Customer app →</a>
+      </div>
+      <p class="demo-note">The demo runs on simulated data. It may take up to a minute to wake up on first load (free hosting).</p>
+      <p class="demo-note">No sign-up needed: on the dashboard, choose <strong>Try with demo data</strong>. The customer app asks you to create an account. Please don't enter real patient or sample details. <a href="privacy.html">Demo privacy notice</a>.</p>
+    </div>
     <div class="clip2" id="backend-clip" hidden>
       <div><span class="num">Clip 2 / Backend and API</span><h3>Under the hood</h3><p>The documented REST API, the automated test suite (119 tests, 85% coverage) and the hash-chained custody log, on simulated data.</p></div>
       <figure class="video-wrap"><video controls preload="metadata" muted playsinline poster="video/aerset-backend-poster.jpg" width="1920" height="1080" id="backend-video"><source src="video/aerset-backend.mp4" type="video/mp4"></video></figure>
@@ -265,7 +286,7 @@
     <div>
       <img src="img/logo-full-white.svg" alt="Aerset" height="24" width="100" style="margin-bottom:14px">
       <p>The trust layer for medical drone delivery</p>
-      <p><a href="interest.html">Register interest</a> · <a href="interest.html#privacy">Privacy</a> · <a class="li-link" href="https://www.linkedin.com/company/aerset/" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></p>
+      <p><a href="interest.html">Register interest</a> · <a href="privacy.html">Privacy</a> · <a class="li-link" href="https://www.linkedin.com/company/aerset/" rel="noopener"><svg class="li" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a></p>
     </div>
     <div>
       <p>Aerset does not operate drones. It is pre-revenue and pre-incorporation, and is not CAA-approved, NHS-assured, security-audited or production-ready. Assurance certifications are planned, not held. Screens and video show simulated data. Hospital names are used only to make the demo route realistic and do not imply any relationship.</p>
@@ -273,6 +294,10 @@
     </div>
   </div>
 </footer>
+<script>
+(function(){var v=document.getElementById('demo-video'),s=document.getElementById('demo-video-src');if(!v||!s)return;
+ s.addEventListener('error',function(){v.poster=v.dataset.fallbackPoster;v.src=v.dataset.fallbackSrc;v.muted=true;v.load();});})();
+</script>
 <script>
 (function(){var v=document.getElementById('backend-video'),b=document.getElementById('backend-clip');
 fetch('video/aerset-backend.mp4',{method:'HEAD'}).then(function(r){if(r.ok)b.hidden=false;}).catch(function(){
